@@ -2,19 +2,19 @@
 #include<iostream>
 using namespace std;
 void Pattern21(int n){
+    int m = 2*n;
     int i, j;
-    int top, bottom, right, left;
     for(i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            top=i;
-            left=j;
-            bottom=n-1-i;
-            right=n-1-j;
-            cout << ((n/2)+1-min(min(top,bottom),min(left,right)));
+        for(int j=0;j<m-1;j++){
+            if(j == n-1-i || j == n-1+i || i == n-1)
+            {
+                cout << "*";
+            }
+            else
+                cout << " ";
         }
-        cout<< endl;
+        cout << endl;
     }
-    
 }
 
 int main(){

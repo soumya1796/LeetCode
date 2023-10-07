@@ -3,18 +3,21 @@
 using namespace std;
 void Pattern21(int n){
     int i, j;
-    int top, bottom, right, left;
+    int k;
     for(i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            top=i;
-            left=j;
-            bottom=n-1-i;
-            right=n-1-j;
-            cout << ((n/2)+1-min(min(top,bottom),min(left,right)));
+        k=1;
+        for(j=0;j<=i;j++){
+            if(i==n-1 || j==0 || i==j){
+                cout << k;
+            }
+            else{
+                cout << " ";
+                k;
+            }
+            k++;
         }
-        cout<< endl;
+        cout << endl;
     }
-    
 }
 
 int main(){
